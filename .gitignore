@@ -1,0 +1,25 @@
+# Python garbage
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Local artifacts
+*.log
+*.csv
+metrics.txt
+batch_logs.csv
+logs.csv
+
+# Docker volumes
+grafana-storage/
+prometheus-data/
+
+# OS trash
+.DS_Store
+Thumbs.db
+
+# sh files
+init_files.sh

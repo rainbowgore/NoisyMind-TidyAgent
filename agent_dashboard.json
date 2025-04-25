@@ -1,0 +1,77 @@
+{
+    "dashboard": {
+        "id": null,
+        "uid": null,
+        "title": "CLI Agent Metrics",
+        "timezone": "browser",
+        "panels": [
+            {
+                "type": "stat",
+                "title": "Total Successes",
+                "gridPos": {
+                    "h": 4,
+                    "w": 6,
+                    "x": 0,
+                    "y": 0
+                },
+                "targets": [
+                    {
+                        "expr": "agent_success_total",
+                        "format": "time_series"
+                    }
+                ]
+            },
+            {
+                "type": "stat",
+                "title": "Total Fallbacks",
+                "gridPos": {
+                    "h": 4,
+                    "w": 6,
+                    "x": 6,
+                    "y": 0
+                },
+                "targets": [
+                    {
+                        "expr": "agent_fallback_total",
+                        "format": "time_series"
+                    }
+                ]
+            },
+            {
+                "type": "graph",
+                "title": "Fallbacks Over Time",
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 0,
+                    "y": 4
+                },
+                "targets": [
+                    {
+                        "expr": "agent_fallback_total",
+                        "format": "time_series"
+                    }
+                ]
+            },
+            {
+                "type": "graph",
+                "title": "Successes Over Time",
+                "gridPos": {
+                    "h": 8,
+                    "w": 12,
+                    "x": 12,
+                    "y": 4
+                },
+                "targets": [
+                    {
+                        "expr": "agent_success_total",
+                        "format": "time_series"
+                    }
+                ]
+            }
+        ],
+        "schemaVersion": 30,
+        "version": 1,
+        "refresh": "5s"
+    }
+}
