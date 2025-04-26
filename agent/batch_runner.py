@@ -3,20 +3,16 @@ import csv
 from datetime import datetime
 from cli import agent_main
 
-queries = [
-    "What does error code 137 mean in Docker?",
-    "Explain how AWS S3 versioning works.",
-    "How do you create a virtual environment in Python?",
-    "What is a 502 Bad Gateway error?",
-    "Best practices for handling API rate limits?",
-    "What is Zero Trust architecture?",
-    "Explain OAuth2 authorization flow.",
-    "Common causes of high memory usage in Kubernetes?",
-    "How does serverless architecture scale?",
-    "What is optimistic concurrency control in databases?"
-]
-
 BATCH_LOG_FILE = "batch_logs.csv"
+
+def load_queries():
+    queries = []
+    with open("queries.txt", "r") as file:
+        for line in file:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                queries.append(line)
+    return queries
 
 def init_log():
     with open(BATCH_LOG_FILE, mode='w', newline='') as file:
@@ -35,6 +31,7 @@ def log_batch_result(query: str, success: bool, confidence: float):
 
 def run_batch():
     print("\nRunning batch evaluation...\n")
+    queries = load_queries()
     init_log()
 
     success_count = 0

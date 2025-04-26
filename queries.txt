@@ -1,0 +1,33 @@
+# Kubernetes
+Explain what causes "OOMKilled" errors in Kubernetes pods.
+How do you configure resource limits and requests in Kubernetes?
+
+# AWS / Cloud
+What does a 403 AccessDeniedException in AWS Lambda usually mean?
+How does AWS S3 versioning work and why is it important?
+
+# Docker
+What does error code 137 mean when stopping a Docker container?
+
+# Authentication / Security
+Explain the OAuth2 authorization flow for web applications.
+What is Zero Trust security architecture and how does it differ from VPNs?
+
+# HTTP / API Debugging
+What are common causes of a 502 Bad Gateway error?
+What strategies help handle API rate limit errors?
+
+# Serverless / Cloud Scaling
+How does serverless architecture auto-scale under high load?
+
+# Database Systems
+Explain optimistic concurrency control in SQL databases.
+What are common causes of deadlock situations in transactional systems?
+
+# Monitoring / Observability
+How do retry policies impact SQS message processing reliability?
+Why is structured logging critical for debugging distributed systems?
+
+# Agent Behavior
+What does it mean when an LLM model "hallucinates"?
+How can prompt design reduce output variability in LLMs?
