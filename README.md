@@ -75,6 +75,8 @@ python agent/cli.py --query "Explain Zero Trust architecture"
 ```bash
 python agent/batch_runner.py
 ```
+Batch queries are loaded dynamically from `agent/queries.txt`.  
+You can edit this file to customize test coverage.
 
 ### 5. Start the Metrics Server
 
@@ -167,6 +169,17 @@ Import `agent_dashboard.json` to view fallback/success trends live.
 - Flask
 - Prometheus
 - Grafana
+
+---
+
+## Future Enhancements
+
+- Add multi-agent comparison (evaluate multiple LLM models side-by-side)
+- Introduce automatic Grafana alerts based on fallback thresholds
+- Enable dynamic model selection at runtime via CLI flags
+- Expand batch queries with categorized domains (Auth, Observability, Security)
+- Integrate Slack or email notifications on high fallback rates
+
 
 ---
 
